@@ -13,19 +13,33 @@
       <form id="inputTask" class="" action="index.html" method="post">
         <div class="form-group">
           <label for="whatName">Please enter task</label>
-          <input id="whatName" type="text" name="name" value="" required>
-
+          <input class="form-control" id="whatName" type="text" name="name" placeholder="what" value="" required>
         </div>
         <div class="form-group">
           <label for="whoTask">Please enter who's doing the task</label>
-          <input id ="whoTask" type="text" name="name" value="" required>
+          <input class="form-control" id ="whoTask" type="text" name="name" placeholder="Who"value="" required>
         </div>
         <div class="form-group">
-          <label for="whenTask">Please enter who's doing the task</label>
-          <input id ="whenTask" type="text" name="name" value="" required>
+          <label for="whenTask">Please enter when task need to be finish</label>
+          <input class="form-control" id ="whenTask" type="text" name="name" value="" placeholder="when" required>
         </div>
-        <button type="submt" name="button"></button>
+        <button type="submit" name="button" id="add">Add task</button>
+        <button type="button">Delete finished tasks</button>
       </form>
+      <div class="row">
+        <div class="col-md-6">
+          <ul id="taskListOutput"></ul>
+        </div>
+        <div class="col-md-6">
+          <div id="taskDisplay">
+            <p>
+              Person completing the task: <span class="inputtedPerson"></span><br>
+              Task being conducted: <span class="inputtedTask"></span><br>
+              Task completed by: <span class="inputtedTime"></span>
+            </p>
+          </div>
+        </div>
+      </div>
 
     </div>
   </body>

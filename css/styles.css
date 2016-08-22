@@ -1,0 +1,11 @@
+.taskDisplay {
+  display: none;
+}
+
+#taskListOutput {
+  cursor: pointer;
+  color: #0088cc;
+}
+#taskListOutput:hover {
+  text-decoration: underline;
+}
