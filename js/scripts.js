@@ -14,19 +14,19 @@ $(document).ready(function() {
     var timeTask = $("input#whenTask").val();
 
     var newTasks = new Chore(nameTask, personTask, timeTask);
-    $("ul#taskListOutput").append("<li>" + newTasks.taskName +"</li>");
+    $("ul#taskListOutput").append("<li><span class='chore'>" + newTasks.taskName +"</span></li>");
 
     $("input#whatName").val("");
     $("input#whoTask").val("");
     $("input#whenTask").val("");
 
-    $("#taskListOutput").last().click(function(){
+    $("#taskListOutput li").last().click(function(){
       $("#taskDisplay").show();
       $(".inputtedPerson").text(newTasks.personName);
       $(".inputtedTask").text(newTasks.taskName);
       $(".inputtedTime").text(newTasks.dateName);
     });
-    $("#taskListOutput").dblclick(function() {
+    $("#taskListOutput li").dblclick(function() {
       $(this).remove();
       $("#taskDisplay").hide();
     })
